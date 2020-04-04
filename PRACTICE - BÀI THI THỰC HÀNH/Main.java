@@ -1,25 +1,20 @@
+package phong;
+
 import java.util.Scanner;
 
 public class Main {
-
-    public static void main(String[] args) {
-
-        EmployeeFullTime employeeFullTime1 = new EmployeeFullTime();
-        EmployeePartime employeePartime1 = new EmployeePartime();
-
-        float baseSalary_employeeFullTime1;
-        float baseSalary_employeePartime1;
-        Scanner input = new Scanner(System.in);
-
-        System.out.print("Enter base Salary employee FullTime: ");
-        baseSalary_employeeFullTime1 = input.nextFloat();
-        employeeFullTime1.setBaseSalary(baseSalary_employeeFullTime1);
-
-        System.out.print("Enter base Salary employee Partime: ");
-        baseSalary_employeePartime1 = input.nextFloat();
-        employeePartime1.setBaseSalary(baseSalary_employeePartime1);
-
-        System.out.println("Print salary for employee FullTime: " + employeeFullTime1.getSalary());
-        System.out.println("Print salary for employee Partime: " + employeePartime1.getSalary());
-    }
+		public static void main(String[] args) {
+			EmployeeFulltime empFull = new EmployeeFulltime();
+			EmployeeParttime empPart = new EmployeeParttime();
+		
+			Scanner input = new Scanner(System.in);
+			System.out.print("Enter base Salary: ");
+			float baseSalary = input.nextFloat();
+			SalaryPolicy.setBaseSalary(baseSalary);
+			
+			System.out.println("Print salary for employee FullTime: " + empFull.getSalary());
+		    System.out.println("Print salary for employee Partime: " + empPart.getSalary());
+			
+			
+		}
 }
