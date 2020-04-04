@@ -1,17 +1,12 @@
-public class EmployeeFullTime extends SalaryPolicy {
-    private float rate;
+package phong;
 
-    public EmployeeFullTime() {
-        this.rate = 4;
-    }
-
-    public EmployeeFullTime(float baseSalary) {
-        super(baseSalary);
-        this.rate = 4;
-    }
-
-    @Override
-    float getSalary() {
-        return this.rate * super.getBaseSalary();
-    }
+public class EmployeeFulltime extends SalaryPolicy{
+	private final float rate = 4;
+	 public EmployeeFulltime() {
+	       
+	    }
+	
+	public float getSalary() {
+		return rate*(super.getBaseSalary());
+	}
 }
